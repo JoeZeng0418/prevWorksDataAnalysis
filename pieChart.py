@@ -50,7 +50,7 @@ for i in range(sheet.nrows):
     rowlist.append(sec2)
     rowlist.append(sec3)
     currlist.append(rowlist)
-# print(collist)
+print(collist)
 # print(totlist)
 
 # totlist = [
@@ -72,44 +72,34 @@ for i in range(sheet.nrows):
 #     ]
 # ]# collist = ['', 'Sex', 'Age']
 
-x = []
-y = []
-sizes = []
-text = []
-print(totlist[1])
-count = 0
+figures = []
 
-for i in range(1, len(totlist)):
+for i in range(1, len(totlist)): # for every category
+  labels = []
+  values_rate = []
+  values_number = []
   for j in range(0, len(totlist[i])):
-    text.append(totlist[i][j][0])
-    x.append(collist[i])
-    temp = totlist[i][j][1]
-    if temp == '-':
-      temp = 0;
-    y.append(temp)
-    if totlist[i][j][2] == '-': #print(totlist[i][j][2])
-      sizes.append(0)
-    else :#print(totlist[i][j][2])
-      sizes.append(totlist[i][j][2] / 500)
-    count += 1
+    labels.append(totlist[i][j][0])
+    values_rate.append(totlist[i][j][1])
+    values_number.append(totlist[i][j][2])
+  trace = go.Pie(labels=labels, values=values_number)
+  plotly.offline.plot([trace], filename="basic_pie_chart"+str(i))
 
 
 
 
-# N = 10# x = np.random.rand(N)# x = ['giraffes', 'orangutans', 'monkeys', 'giraffes', 'giraffes', 'orangutans', 'monkeys', 'giraffes', 'giraffes', 'orangutans']# y = np.random.rand(N)
-colors = np.random.rand(count)
 
-fig = go.Figure()
-fig.add_scatter(
-  x = x,
-  y = y,
-  mode = 'markers',
-  marker = {
-    'size': sizes,
-    'color': colors,
-    'opacity': 0.6,
-    'colorscale': 'Viridis'
-  },
-  text = text
-);
-plotly.offline.plot(fig)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

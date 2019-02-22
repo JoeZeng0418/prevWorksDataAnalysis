@@ -9,6 +9,24 @@ import xlrd
 
 import xlrd
 
+colorsTable = np.array([
+  "rgb(132, 179, 255)",
+  "rgb(252, 133, 131)",
+  "rgb(252, 210, 131)",
+  "rgb(228, 249, 122)",
+  "rgb(112, 229, 229)",
+  "rgb(108, 120, 221)",
+  "rgb(185, 93, 221)",
+  "rgb(247, 123, 144)",
+  "rgb(86, 17, 17)",
+  "rgb(81, 76, 15)",
+  "rgb(28, 79, 15)",
+  "rgb(22, 107, 88)",
+  "rgb(23, 27, 91)",
+  "rgb(88, 29, 109)",
+  "rgb(104, 24, 45)"
+])
+
 loc = ("data/trunk_cal_data_rate.xlsx")
 loc2 = ("data/trunk_cal_data_number.xlsx")
 
@@ -76,7 +94,6 @@ x = []
 y = []
 sizes = []
 text = []
-print(totlist[1])
 count = 0
 
 for i in range(1, len(totlist)):
@@ -97,7 +114,8 @@ for i in range(1, len(totlist)):
 
 
 # N = 10# x = np.random.rand(N)# x = ['giraffes', 'orangutans', 'monkeys', 'giraffes', 'giraffes', 'orangutans', 'monkeys', 'giraffes', 'giraffes', 'orangutans']# y = np.random.rand(N)
-colors = np.random.rand(count)
+colorIndex = np.random.randint(len(colorsTable), size=count)
+colors = colorsTable[colorIndex]
 
 fig = go.Figure()
 fig.add_scatter(
@@ -112,4 +130,17 @@ fig.add_scatter(
   },
   text = text
 );
-plotly.offline.plot(fig)
+plotly.offline.plot(fig, filename="scatter_plot_"+str(2017))
+
+
+
+
+
+
+
+
+
+
+
+
+
