@@ -7,8 +7,10 @@ import os
 import numpy as np
 # excel read
 import xlrd
+import random
 
-import xlrd
+import random
+ 
 
 loc = ("data/trunk_cal_data_rate.xlsx") 
 loc2 = ("data/trunk_cal_data_number.xlsx")
