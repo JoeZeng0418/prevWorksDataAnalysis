@@ -6,8 +6,10 @@ import plotly.io as pio
 import os
 import numpy as np# excel read
 import xlrd
+import random
 
-import xlrd
+import random
+ 
 
 colorsTable = np.array([
   "rgb(132, 179, 255)",
