@@ -6,10 +6,8 @@ import plotly.io as pio
 import os
 import numpy as np# excel read
 import xlrd
-import random
 
-import random
- 
+import xlrd
 
 loc = ("data/trunk_cal_data_rate.xlsx")
 loc2 = ("data/trunk_cal_data_number.xlsx")
