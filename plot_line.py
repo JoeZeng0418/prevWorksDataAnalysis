@@ -16,10 +16,10 @@ def random_colors():
   b = int(randint(0,255))
   return (r,g,b)
 
-loc = ("data/trunk_cal_data_rate.xlsx") 
-loc2 = ("data/trunk_cal_data_number.xlsx")
+loc = ("data/trunk_Nation_wide_rate.xlsx") 
+loc2 = ("data/trunk_Nation_wide_case.xlsx")
 
-state_name = 'California'
+state_name = 'NationWide'
 
 
 wb = xlrd.open_workbook(loc) 
