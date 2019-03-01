@@ -116,7 +116,7 @@ for i in range(1,len(totlist)):
 
   fig = dict(data=data, layout=layout)
 
-  filen = 'public/graph/'+state_name+'_Line_' + collist[i] +'.html' 
+  filen = 'public/graphs/'+state_name+'_Line_' + collist[i] +'.html' 
   # print(filen)
 
   plotly.offline.plot(fig, filename=filen)
