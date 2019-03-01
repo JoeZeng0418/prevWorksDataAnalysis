@@ -17,14 +17,15 @@ body, html{
 	align-items: center;
 }
 #graph_container{
-	height: 70%;
+	height: 90%;
 	width: 70%;
 	background-color: black;
-	/*display: flex;*/
-	/*flex-direction: column;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 #graph_window{
-	/*height: 50rem;*/
 }
 #selection_form{
 	height: 50%;
