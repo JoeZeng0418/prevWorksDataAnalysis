@@ -65,7 +65,7 @@ for i in range(sheet.nrows):
       rowlist.append(sec)
 
     currlist.append(rowlist)
-# print(totlist)
+print(totlist)
 
 # totlist = [[], [['Men', 25.4, 128960.0], ['Women', 18.7, 71010.0]], [['Under 14', '-', '-'], ['14 to 15', '-', '-'], ['16 to 19', 16.7, 3470.0], ['20 to 24', 24.7, 15850.0], ['25 to 34', 21.9, 43630.0], ['35 to 44', 23.5, 44710.0], ['45 to 54', 25.4, 45140.0], ['55 to 64', 21.0, 36480.0], ['65 and over', 23.1, 7960.0]]]
 # collist = ['', 'Sex','Age']
