@@ -29,9 +29,9 @@ colorsTable = np.array([
   "rgb(104, 24, 45)"
 ])
 
-loc = ("data/trunk_cal_data_rate.xlsx")
-loc2 = ("data/trunk_cal_data_number.xlsx")
-
+loc = ("data/trunk_Nation_wide_rate.xlsx")
+loc2 = ("data/trunk_Nation_wide_case.xlsx")
+statename = 'NationWide'
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_index(0)
 
@@ -132,7 +132,7 @@ fig.add_scatter(
   },
   text = text
 );
-plotly.offline.plot(fig, filename="scatter_plot_"+str(2017))
+plotly.offline.plot(fig, filename="public/graphs/"+statename+"_"+str(2017)+"_Scatter"+".html")
 
 
 

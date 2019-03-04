@@ -10,8 +10,8 @@ import xlrd
 import xlrd
 
 loc = ("data/trunk_cal_data_rate.xlsx")
-loc2 = ("data/trunk_cal_data_number.xlsx")
-
+loc2 = ("data/trunk_cal_data_case.xlsx")
+statename = 'California'
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_index(0)
 
@@ -33,6 +33,13 @@ for i in range(sheet.nrows):
   if (rowname != ''):
     if (rowname[-1] == ':'):
       probsum = 0;
+      rowname = rowname[0:-1]
+      rownamelist = rowname.split("(")
+      rowname = rownamelist[0]
+      rowname = rowname.replace(' ','_')
+      rowname = rowname.replace(',','')
+
+
       collist.append(rowname)
       newlist = list()
       currlist = newlist
@@ -85,7 +92,7 @@ for i in range(1, len(totlist)): # for every category
   trace = go.Pie(labels=labels, values=values_number)
   print(labels)
   print(values_number)
-  plotly.offline.plot([trace], filename="basic_pie_chart"+str(i)+".html")
+  plotly.offline.plot([trace], filename="public/graphs/" + statename + "_2017" + '_Pie_' + collist[i]+".html")
 
 
 

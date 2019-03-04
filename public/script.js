@@ -20,14 +20,14 @@ function doSomething(){
 				var url = "graphs/" + state1 + "_" + graph_type + "_" + category + ".html";
 				$("#year").val("-1");
 				setGraphURL("#graph_window1", url);
-			} else if (graph_type=="Pie"&&year!="-1") {
+			} else if (graph_type=="Pie"&&category!="-1") {
 				var url = "graphs/" + state1 + "_" + year + "_" + graph_type + "_" + category + ".html";
 				setGraphURL("#graph_window1", url);
 			} else {
 
 			}
 			// get state2 graph
-			if (graph_type=="Scatter") {
+			if (graph_type=="Scatter"&&year!="-1") {
 				var url = "graphs/" + state2 + "_" + year + "_" + graph_type + ".html";
 				$("#category").val("-1");
 				setGraphURL("#graph_window2", url);
@@ -35,7 +35,7 @@ function doSomething(){
 				var url = "graphs/" + state2 + "_" + graph_type + "_" + category + ".html";
 				$("#year").val("-1");
 				setGraphURL("#graph_window2", url);
-			} else if (graph_type=="Pie") {
+			} else if (graph_type=="Pie"&&category!="-1") {
 				var url = "graphs/" + state2 + "_" + year + "_" + graph_type + "_" + category + ".html";
 				setGraphURL("#graph_window2", url);
 			} else {
@@ -53,7 +53,7 @@ function doSomething(){
 				var url = "graphs/" + state1 + "_" + graph_type + "_" + category + ".html";
 				$("#year").val("-1");
 				setGraphURL("#graph_window", url);
-			} else if (graph_type=="Pie"&&year!="-1") {
+			} else if (graph_type=="Pie"&&category!="-1") {
 				var url = "graphs/" + state1 + "_" + year + "_" + graph_type + "_" + category + ".html";
 				setGraphURL("#graph_window", url);
 			} else {
@@ -62,7 +62,7 @@ function doSomething(){
 		} else if(state2!="-1") {
 			showOneGraph();
 			// get state2 graph
-			if (graph_type=="Scatter") {
+			if (graph_type=="Scatter"&&year!="-1") {
 				var url = "graphs/" + state2 + "_" + year + "_" + graph_type + ".html";
 				$("#category").val("-1");
 				setGraphURL("#graph_window", url);
@@ -70,14 +70,14 @@ function doSomething(){
 				var url = "graphs/" + state2 + "_" + graph_type + "_" + category + ".html";
 				$("#year").val("-1");
 				setGraphURL("#graph_window", url);
-			} else if (graph_type=="Pie") {
+			} else if (graph_type=="Pie"&&category!="-1") {
 				var url = "graphs/" + state2 + "_" + year + "_" + graph_type + "_" + category + ".html";
 				setGraphURL("#graph_window", url);
 			} else {
 
 			}
 		} else {
-			
+
 		}
 	}
 	
