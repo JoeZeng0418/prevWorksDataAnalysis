@@ -20,6 +20,52 @@ loc = ("data/trunk_cal_data_rate.xlsx")
 loc2 = ("data/trunk_cal_data_number.xlsx")
 
 state_name = 'California'
+"All_U.S.",
+"Alabama",
+"Alaska",
+"Arizona",
+"Arkansas",
+"California",
+"Connecticut",
+"Delaware",
+"District of Columbia",
+"Georgia",
+"Hawaii",
+"Illinois",
+"Indiana",
+"Iowa",
+"Kansas",
+"Kentucky",
+"Louisiana",
+"Maine",
+"Maryland",
+"Massachusetts",
+"Michigan",
+"Minnesota",
+"Missouri",
+"Montana",
+"Nebraska",
+"Nevada",
+"New Jersey",
+"New Mexico",
+"New York",
+"North Carolina",
+"Ohio",
+"Oregon",
+"Pennsylvania",
+"Puerto Rico",
+"South Carolina",
+"Tennessee",
+"Texas",
+"Utah",
+"Vermont",
+"Virginia",
+"Virgin Islands",
+"Washington",
+"West Virginia",
+"Wisconsin",
+"Wyoming",
+"Guam";
 
 
 wb = xlrd.open_workbook(loc) 
@@ -38,7 +84,7 @@ problist = list()
 
 for i in range(sheet.nrows):
  rowname = sheet.cell_value(i,0)
- if(rowname == "Footnotes:"):
+ if(rowname == "Footnote:"):
   break;
  if(rowname != ''):
   if(rowname[-1]==':'):

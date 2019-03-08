@@ -8,73 +8,65 @@
 	<title>PrevWorks Data visualization</title>
 </head>
 <body>
+	<div id="title">Prevworks Data Visualization Tool</div>
 	<div id="container">
 		<div id="graph_container">
-			<iframe id="graph_window" class="graph_window" src="graphs/blank.html" width="100%" height="100%"  frameborder="0"></iframe>
-			<iframe id="graph_window1" class="graph_window graph_window2" src="graphs/blank.html" width="100%" height="100%"  frameborder="0"></iframe>
-			<iframe id="graph_window2" class="graph_window graph_window2" src="graphs/blank.html" width="100%" height="100%"  frameborder="0"></iframe>
+			<div id="window" class="window">
+				<div id="graph_title" class="graph_title"></div>
+				<iframe id="graph_window" class="graph_window" src="graphs/blank.html" width="100%" height="100%"  frameborder="0"></iframe>
+			</div>
+			<div id="window1" class="window1 window">
+				<div id="graph_title1" class="graph_title"></div>
+				<iframe id="graph_window1" class="graph_window graph_window2" src="graphs/blank.html" width="100%" height="100%"  frameborder="0"></iframe>
+			</div>
+			<div id="window2" class="window window2">
+				<div id="graph_title2" class="graph_title"></div>
+				<iframe id="graph_window2" class="graph_window graph_window2" src="graphs/blank.html" width="100%" height="100%"  frameborder="0"></iframe>
+			</div>
 		</div>
 		<div id="selection_form">
 			<div id="selection_inner">
-				<select id="state1" name="State1" onchange="doSomething();">
-					<option value="-1">--</option>
-				    <option value="NationWide">NationWide</option>
-				    <option value="California">California</option> 
-				    <option value="Washington">Washington</option>
-				    <option value="New_York">New York</option>
-				</select>
-				<select id="state2" name="State2" onchange="doSomething();">
-					<option value="-1">--</option>
-				    <option value="NationWide">NationWide</option>
-				    <option value="California">California</option> 
-				    <option value="Washington">Washington</option>
-				    <option value="New_York">New York</option>
-				</select>
-				<select id="year" name="Year" onchange="doSomething();">
-					<option value="-1">--</option>
-				    <option value="2017">2017</option>
-				    <option value="2016">2016</option> 
-				    <option value="2015">2015</option>
-				    <option value="2014">2014</option>
-				</select>
-				<select id="graph_type" name="GraphType" onchange="doSomething();">
-					<option value="-1">--</option>
-				    <option value="Scatter">Scatter Chart</option>
-				    <option value="Line">Line Chart</option> 
-				    <option value="Pie">Pie Chart</option>
-				</select>
-				<select id="category" name="Category" onchange="doSomething();">
-					<option value="-1">--</option>
-				    <option value="Sex">Sex</option>
-				    <option value="Age">Age</option> 
-				    <option value="Occupation">Occupation</option>
-				</select>
+				<div class="select_box">
+					<div id="select_title">State 1</div>
+					<select id="state1" name="State1" onchange="doSomething();">
+						<option value="-1">--</option>
+<!-- 					    <option value="NationWide">NationWide</option>
+					    <option value="California">California</option> 
+					    <option value="Washington">Washington</option>
+					    <option value="New_York">New York</option> -->
+					</select>
+				</div>
+				<div class="select_box">
+					<div id="select_title">State 2</div>
+					<select id="state2" name="State2" onchange="doSomething();">
+						<option value="-1">--</option>
+					</select>
+				</div>
+				<div class="select_box">
+					<div id="select_title">Year</div>
+					<select id="year" name="Year" onchange="doSomething();">
+						<option value="-1">--</option>
+					</select>
+				</div>
+				<div class="select_box">
+					<div id="select_title">Graph Type</div>
+					<select id="graph_type" name="GraphType" onchange="doSomething();">
+						<option value="-1">--</option>
+					</select>
+				</div>
+				<div class="select_box">
+					<div id="select_title">Category</div>
+					<select id="category" name="Category" onchange="doSomething();">
+						<option value="-1">--</option>
+					    <option value="Sex">Sex</option>
+					    <option value="Age">Age</option> 
+					    <option value="Occupation">Occupation</option>
+					</select>
+				</div>
 			</div>
 		</div>
 	</div>
 </body>
-
-<!-- <!DOCTYPE html>
-<html>
-<script type="text/javascript">
- function setURL(url){
-    document.getElementById('datawindow').src = url;
-}
-</script>
-<head>
- <title>PrevWork</title>
-</head>
-<body>
- <iframe id="datawindow" src="styled-line3.html" width="1000" height="1000"  frameborder="0"></iframe>
- <input type="button" name="California" onclick="setURL('styled-line2.html')"/>
- <input type="button" name="Californi" onclick="setURL('styled-line3.html')"/>
- <input type="button" name="Californ" onclick="setURL('styled-line4.html')"/>
- <input type="button" name="Califor" onclick="setURL('styled-line5.html')"/>
- <input type="button" name="Califo" onclick="setURL('styled-line6.html')"/>
- <input type="button" name="Calif" onclick="setURL('styled-line7.html')"/>
- <input type="button" name="Cali" onclick="setURL('styled-line8.html')"/>
-</body>
-</html> -->
 
 	<script type="text/javascript" src="assets/js/jquery-1.10.2.js"></script>
 	<script src="script.js" charset="utf-8"></script>
