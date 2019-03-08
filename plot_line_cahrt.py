@@ -19,7 +19,7 @@ def random_colors():
 loc = ("data/trunk_cal_data_rate.xlsx") 
 loc2 = ("data/trunk_cal_data_number.xlsx")
 
-state_name = 'California'
+state_name =
 "All_U.S.",
 "Alabama",
 "Alaska",
