@@ -28,39 +28,35 @@
 			<div id="selection_inner">
 				<div class="select_box">
 					<div id="select_title">State 1</div>
-					<select id="state1" name="State1" onchange="doSomething();">
+					<select id="state1" name="State1" onchange="updateGraph();">
 						<option value="-1">--</option>
-<!-- 					    <option value="NationWide">NationWide</option>
-					    <option value="California">California</option> 
-					    <option value="Washington">Washington</option>
-					    <option value="New_York">New York</option> -->
 					</select>
 				</div>
 				<div class="select_box">
 					<div id="select_title">State 2</div>
-					<select id="state2" name="State2" onchange="doSomething();">
+					<select id="state2" name="State2" onchange="updateGraph();">
 						<option value="-1">--</option>
 					</select>
 				</div>
+				<div id="merge_button">
+					<button onclick="mergeGraphs();">Merge</button>
+				</div>
 				<div class="select_box">
 					<div id="select_title">Year</div>
-					<select id="year" name="Year" onchange="doSomething();">
+					<select id="year" name="Year" onchange="updateGraph();">
 						<option value="-1">--</option>
 					</select>
 				</div>
 				<div class="select_box">
 					<div id="select_title">Graph Type</div>
-					<select id="graph_type" name="GraphType" onchange="doSomething();">
+					<select id="graph_type" name="GraphType" onchange="updateGraph();">
 						<option value="-1">--</option>
 					</select>
 				</div>
 				<div class="select_box">
 					<div id="select_title">Category</div>
-					<select id="category" name="Category" onchange="doSomething();">
+					<select id="category" name="Category" onchange="updateGraph();">
 						<option value="-1">--</option>
-					    <option value="Sex">Sex</option>
-					    <option value="Age">Age</option> 
-					    <option value="Occupation">Occupation</option>
 					</select>
 				</div>
 			</div>
