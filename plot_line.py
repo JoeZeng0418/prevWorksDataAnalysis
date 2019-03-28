@@ -64,8 +64,8 @@ statename = [
 "Wyoming",
 "Guam"]
 
-
-for i in range(len(statename)):
+for i in range(1):
+# for i in range(len(statename)):
   sn = statename[i].replace(" ","_")
 
   loc = ("data/trunk_"+sn+"_rate.xlsx") 
@@ -127,32 +127,33 @@ for i in range(len(statename)):
 
       currlist.append(rowlist)
 
-  print(collist)
-  year = [2011,2012,2013,2014,2015,2016,2017]
-  for i in range(1,len(totlist)):
-    data = []
-    for j in range(len(totlist[i])):
-      datalist  = list()
-      for z in range(1,8):
-        datalist.append(totlist[i][j][z])
+  # print(collist)
+  # print(rowlist)
+  # year = [2011,2012,2013,2014,2015,2016,2017]
+  # for i in range(1,len(totlist)):
+  #   data = []
+  #   for j in range(len(totlist[i])):
+  #     datalist  = list()
+  #     for z in range(1,8):
+  #       datalist.append(totlist[i][j][z])
 
-      # print(datalist)
-      trace = go.Scatter(
-          x = year,
-          y = datalist,
-          name = totlist[i][j][0],
-          line = dict(
-              color = ("rgb" + str(random_colors())),
-              width = 1)
-      )
-      data.append(trace)
+  #     # print(datalist)
+  #     trace = go.Scatter(
+  #         x = year,
+  #         y = datalist,
+  #         name = totlist[i][j][0],
+  #         line = dict(
+  #             color = ("rgb" + str(random_colors())),
+  #             width = 1)
+  #     )
+  #     data.append(trace)
     
-    layout = dict(title = collist[i],
-                xaxis = dict(title = 'year'),
-                yaxis = dict(title = 'percentage'),
-                )
+  #   layout = dict(title = collist[i],
+  #               xaxis = dict(title = 'year'),
+  #               yaxis = dict(title = 'percentage'),
+  #               )
 
-    fig = dict(data=data, layout=layout)
+  #   fig = dict(data=data, layout=layout)
 
-    filen = 'public/graphs/'+state_name+'_Line_' + collist[i] +'.html' 
-    plotly.offline.plot(fig, filename=filen)
+  #   filen = 'public/graphs/'+state_name+'_Line_' + collist[i] +'.html' 
+  #   plotly.offline.plot(fig, filename=filen)
