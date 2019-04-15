@@ -9,6 +9,9 @@ import xlrd
 
 import xlrd
 
+if not os.path.exists('images'):
+  os.mkdir('images')
+
 states = [
   "All U.S.",
   "Alabama",
@@ -64,7 +67,7 @@ for l in range(0,1):
   filename2 = "data/trunk_" + states[l].replace(" ","_") + "_case.xlsx"
   loc = (filename1)
   loc2 = (filename2)
-  # statename = 'California'
+  
   wb = xlrd.open_workbook(loc)
   sheet = wb.sheet_by_index(0)
 
@@ -110,31 +113,12 @@ for l in range(0,1):
         rowlist.append(sec2)
         rowlist.append(sec3)
         currlist.append(rowlist)
-  # print(collist)
-  # print(totlist)
-
-  # totlist = [
-  #     [],
-  #     [
-  #         ['Men', 25.4, 128960.0],
-  #         ['Women', 18.7, 71010.0]
-  #     ],
-  #     [
-  #         ['Under 14', '-', '-'],
-  #         ['14 to 15', '-', '-'],
-  #         ['16 to 19', 16.7, 3470.0],
-  #         ['20 to 24', 24.7, 15850.0],
-  #         ['25 to 34', 21.9, 43630.0],
-  #         ['35 to 44', 23.5, 44710.0],
-  #         ['45 to 54', 25.4, 45140.0],
-  #         ['55 to 64', 21.0, 36480.0],
-  #         ['65 and over', 23.1, 7960.0]
-  #     ]
-  # ]# collist = ['', 'Sex', 'Age']
 
   figures = []
 
   for i in range(1, len(totlist)): # for every category
+  # for i in range(3,4): # just for occupation
+    pass
     labels = []
     values_rate = []
     values_number = []
@@ -143,9 +127,13 @@ for l in range(0,1):
       values_rate.append(totlist[i][j][1])
       values_number.append(totlist[i][j][2])
     trace = go.Pie(labels=labels, values=values_number)
-    # print(labels)
-    # print(values_number)
     plotly.offline.plot([trace], filename="public/graphs/" + states[l].replace(" ","_") + "_2017" + '_Pie_' + collist[i]+".html")
+    # for image output
+    # data = go.Data([trace])
+    # layout=go.Layout(title="Occupation")
+    # figure=go.Figure(data=data,layout=layout)
+    # pio.write_image(figure, 'images/fig1.png')
+
 
 
 

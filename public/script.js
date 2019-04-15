@@ -91,13 +91,16 @@ function updateGraph(){
 				setGraphURL("#graph_window1", url);
 			} else if(graph_type=="Line"&&category!="-1") {
 				console.log("2 line graphs");
-				var title = "Line plot (rates) for " + state1 + " for years from 2011 to 2017 in "+ category;
+				var title = "Line plot (rates out of 10000) for " + state1 + " for years from 2011 to 2017 in "+ category;
 				setGraphTitle("#graph_title1", title);
 				var url = "graphs/" + state1 + "_" + graph_type + "_" + category + ".html";
 				$("#year").val("-1");
 				setGraphURL("#graph_window1", url);
 			} else if (graph_type=="Pie"&&category!="-1"&&year!="-1") {
 				console.log("2 pie graphs");
+				// currently only have 2017, to generate other years, run python script with other years as column row 
+				year = 2017;
+				$("#year").val("2017");
 				var title = "Pie Chart (cases) for " + state1 + " at " + year + " in " + category;
 				setGraphTitle("#graph_title1", title);
 				var url = "graphs/" + state1 + "_" + year + "_" + graph_type + "_" + category + ".html";
@@ -115,12 +118,15 @@ function updateGraph(){
 				$("#category").val("-1");
 				setGraphURL("#graph_window2", url);
 			} else if(graph_type=="Line"&&category!="-1") {
-				var title = "Line plot (rates) for " + state2 + " for years from 2011 to 2017 in " + category;
+				var title = "Line plot (rates out of 10000) for " + state2 + " for years from 2011 to 2017 in " + category;
 				setGraphTitle("#graph_title2", title);
 				var url = "graphs/" + state2 + "_" + graph_type + "_" + category + ".html";
 				$("#year").val("-1");
 				setGraphURL("#graph_window2", url);
 			} else if (graph_type=="Pie"&&category!="-1"&&year!="-1") {
+				// currently only have 2017, to generate other years, run python script with other years as column row 
+				year = 2017;
+				$("#year").val("2017");
 				var title = "Pie Chart (cases) for " + state2 + " at " + year + " in " + category;
 				setGraphTitle("#graph_title2", title);
 				var url = "graphs/" + state2 + "_" + year + "_" + graph_type + "_" + category + ".html";
@@ -141,12 +147,15 @@ function updateGraph(){
 				$("#category").val("-1");
 				setGraphURL("#graph_window", url);
 			} else if(graph_type=="Line"&&category!="-1") {
-				var title = "Line plot (rates) for " + state1 + " for years from 2011 to 2017 in " + category;
+				var title = "Line plot (rates out of 10000) for " + state1 + " for years from 2011 to 2017 in " + category;
 				setGraphTitle("#graph_title", title);
 				var url = "graphs/" + state1 + "_" + graph_type + "_" + category + ".html";
 				$("#year").val("-1");
 				setGraphURL("#graph_window", url);
 			} else if (graph_type=="Pie"&&category!="-1"&&year!="-1") {
+				// currently only have 2017, to generate other years, run python script with other years as column row 
+				year = 2017;
+				$("#year").val("2017");
 				var title = "Pie Chart (cases) for " + state1 + " at " + year + " in " + category;
 				setGraphTitle("#graph_title", title);
 				var url = "graphs/" + state1 + "_" + year + "_" + graph_type + "_" + category + ".html";
@@ -166,12 +175,15 @@ function updateGraph(){
 				$("#category").val("-1");
 				setGraphURL("#graph_window", url);
 			} else if(graph_type=="Line"&&category!="-1") {
-				var title = "Line plot (rates) for " + state2 + " for years from 2011 to 2017 in " + category;
+				var title = "Line plot (rates out of 10000) for " + state2 + " for years from 2011 to 2017 in " + category;
 				setGraphTitle("#graph_title", title);
 				var url = "graphs/" + state2 + "_" + graph_type + "_" + category + ".html";
 				$("#year").val("-1");
 				setGraphURL("#graph_window", url);
 			} else if (graph_type=="Pie"&&category!="-1"&&year!="-1") {
+				// currently only have 2017, to generate other years, run python script with other years as column row 
+				year = 2017;
+				$("#year").val("2017");
 				var title = "Pie Chart (cases) for " + state2 + " at " + year + " in " + category;
 				setGraphTitle("#graph_title", title);
 				var url = "graphs/" + state2 + "_" + year + "_" + graph_type + "_" + category + ".html";
@@ -222,7 +234,7 @@ function mergeGraphs(){
 			var year = $("#year").val();
 			var category = $("#category").val();
 			if (state1!="-1"&&state2!="-1"&&graph_type=="Line"&&year=="-1"&&category!="-1") {
-				var title = "Line plot (rates) to compare " + state1 + " and " + state2 + " for years from 2011 to 2017 in "+ category;
+				var title = "Line plot (rates out of 10000) to compare " + state1 + " and " + state2 + " for years from 2011 to 2017 in "+ category;
 				setGraphTitle("#graph_title", title);
 				// call ajax to run python script
 				var url = "";

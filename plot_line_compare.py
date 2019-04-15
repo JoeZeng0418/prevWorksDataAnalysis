@@ -238,9 +238,9 @@ def index():
 @app.route('/getGraph', methods=['GET', 'POST'])
 def getGraph():
   if request.method == 'GET':
-    print("generating graph\n\n\n\n\n")
+    # print("generating graph\n\n\n\n\n")
     # print(request.form)
-    print("\n\n\n\n\n")
+    # print("\n\n\n\n\n")
     state1 = request.args.get('state1')
     state2 = request.args.get('state2')
     category = request.args.get('category')
